@@ -6,6 +6,7 @@ public enum Screens {
     WEAPON_SCREEN,
     BOSS_SCREEN,
     CHARACTER_SCREEN,
-    SPELL_SCREEN,
+    SORCERY_SCREEN,
+    INCANTATION_SCREEN,
     SCREEN
 }

@@ -1,8 +1,6 @@
 package gui;
 
-import gui.buttons.ArmorButton;
-import gui.buttons.BossButton;
-import gui.buttons.HomeButton;
+import gui.buttons.*;
 import utility.Screens;
 
 import javax.swing.*;
@@ -15,9 +13,26 @@ public class Screen extends JPanel {
     private HomeButton currentScreenHomeButton;
     private ArmorButton currentScreenArmorButton;
     private BossButton currentScreenBossButton;
-    public Screen() {
+    private IncantationButton currentScreenIncantationButton;
+    private SorceryButton currentScreenSorceryButton;
+    private CharacterButton currentScreenCharacterButton;
+    private WeaponButton currentScreenWeaponButton;
+    protected JPanel header;
+    protected JPanel footer;
+    protected JPanel content;
+    public Screen(Screens title) {
         super();
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        header = new JPanel();
+        footer = new JPanel();
+        content = new JPanel();
+        this.add(header);
+        this.add(content);
+        this.add(footer);
         this.setPreferredSize(new Dimension(50 * upscaleFactor, 20 * upscaleFactor));
+        JLabel text = new JLabel(title.toString().toUpperCase().replace('_', ' '));
+        this.header.add(text);
+
     }
     public void setId(Screens newName) {
         this.id = newName;
@@ -28,16 +43,36 @@ public class Screen extends JPanel {
     public void addHomeButton(ActionListener actionListener) {
         this.currentScreenHomeButton = new HomeButton();
         this.currentScreenHomeButton.addActionListener(actionListener);
-        this.add(this.currentScreenHomeButton);
+        this.footer.add(this.currentScreenHomeButton);
     }
     public void addArmorButton(ActionListener actionListener) {
         this.currentScreenArmorButton = new ArmorButton();
         this.currentScreenArmorButton.addActionListener(actionListener);
-        this.add(this.currentScreenArmorButton);
+        this.content.add(this.currentScreenArmorButton);
     }
     public void addBossButton(ActionListener actionListener) {
         this.currentScreenBossButton = new BossButton();
         this.currentScreenBossButton.addActionListener(actionListener);
-        this.add(this.currentScreenBossButton);
+        this.content.add(this.currentScreenBossButton);
+    }
+    public void addSorceryButton(ActionListener actionListener) {
+        this.currentScreenSorceryButton = new SorceryButton();
+        this.currentScreenSorceryButton.addActionListener(actionListener);
+        this.content.add(this.currentScreenSorceryButton);
+    }
+    public void addIncantationButton(ActionListener actionListener) {
+        this.currentScreenIncantationButton = new IncantationButton();
+        this.currentScreenIncantationButton.addActionListener(actionListener);
+        this.content.add(this.currentScreenIncantationButton);
+    }
+    public void addWeaponButton(ActionListener actionListener) {
+        this.currentScreenWeaponButton = new WeaponButton();
+        this.currentScreenWeaponButton.addActionListener(actionListener);
+        this.content.add(this.currentScreenWeaponButton);
+    }
+    public void addCharacterButton(ActionListener actionListener) {
+        this.currentScreenCharacterButton = new CharacterButton();
+        this.currentScreenCharacterButton.addActionListener(actionListener);
+        this.content.add(this.currentScreenCharacterButton);
     }
 }
