@@ -1,5 +1,6 @@
 package gui;
 
+import backend.ConnectionModel;
 import gui.buttons.*;
 import utility.Screens;
 
@@ -8,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class Screen extends JPanel {
-    private final int upscaleFactor = 20;
+    protected ConnectionModel connectionModel = new ConnectionModel();
     private Screens id = Screens.SCREEN;
     private HomeButton currentScreenHomeButton;
     private ArmorButton currentScreenArmorButton;
@@ -29,9 +30,10 @@ public class Screen extends JPanel {
         this.add(header);
         this.add(content);
         this.add(footer);
-        this.setPreferredSize(new Dimension(50 * upscaleFactor, 20 * upscaleFactor));
+        //this.setPreferredSize(new Dimension(1080, 720));
         JLabel text = new JLabel(title.toString().toUpperCase().replace('_', ' '));
         this.header.add(text);
+        connectionModel.connect();
 
     }
     public void setId(Screens newName) {
@@ -43,7 +45,9 @@ public class Screen extends JPanel {
     public void addHomeButton(ActionListener actionListener) {
         this.currentScreenHomeButton = new HomeButton();
         this.currentScreenHomeButton.addActionListener(actionListener);
-        this.footer.add(this.currentScreenHomeButton);
+//        this.footer.setLayout(new BorderLayout());
+        this.content.setAlignmentX(Container.LEFT_ALIGNMENT);
+        this.content.add(this.currentScreenHomeButton);
     }
     public void addArmorButton(ActionListener actionListener) {
         this.currentScreenArmorButton = new ArmorButton();

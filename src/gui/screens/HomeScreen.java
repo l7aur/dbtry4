@@ -9,4 +9,5 @@ public class HomeScreen extends Screen {
         super(Screens.HOME_SCREEN);
         this.setId(Screens.HOME_SCREEN);
     }
+
 }

@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) {
         UserInterface userInterface = new UserInterface();
         createUI(userInterface);
-
     }
     public static void createUI(UserInterface userInterface){
         userInterface.setScreenInUI(new HomeScreen());
