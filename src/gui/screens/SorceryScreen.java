@@ -9,6 +9,7 @@ import javax.swing.*;
 
 
 public class SorceryScreen extends Screen {
+    //Constructor
     public SorceryScreen(){
         super(Screens.SORCERY_SCREEN);
         JScrollPane scrollPane = new JScrollPane(this.setTable());
@@ -17,7 +18,7 @@ public class SorceryScreen extends Screen {
         this.content.add(scrollPane);
         this.setId(Screens.SORCERY_SCREEN);
     }
-
+    //Fetch data from database and display it into a table
     private JTable setTable() {
         String[] columnNames = { "id", "description", "requirement_id", "magic_id", "image" };
         Tuple data = this.connectionModel.getDataFromDB("sorcery", 12, 5);

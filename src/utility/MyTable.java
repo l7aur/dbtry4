@@ -6,6 +6,11 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import java.awt.*;
 
+/**
+ * Updated version of JTable that is equipped with a scroll bar - TODO move scrollbar into the table model
+ * and has some specific features: text of each entry is centered in the cell,
+ * the table cells are not editable,
+ */
 public class MyTable extends JTable {
     public MyTable(String[][] data, String[] columnNames) {
         super(data, columnNames);

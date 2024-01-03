@@ -8,6 +8,7 @@ import utility.Tuple;
 import javax.swing.*;
 
 public class CommentScreen extends Screen {
+    //Constructor
     public CommentScreen(){
         super(Screens.COMMENT_SCREEN);
         JScrollPane scrollPane = new JScrollPane(this.setTable(this.getNumberOfRowsInTable()));
@@ -16,6 +17,7 @@ public class CommentScreen extends Screen {
         this.content.add(scrollPane);
         this.setId(Screens.COMMENT_SCREEN);
     }
+    //Fetch data from database and display it into a table
     private JTable setTable(int numberOfRows) {
         String[] columnNames = { "id", "item_name", "comment" };
         try {
@@ -28,6 +30,10 @@ public class CommentScreen extends Screen {
             return new MyTable((new Tuple(0,0)).getData(), columnNames);
         }
     }
+
+    /**
+     * @return the number of rows inside the 'comments' table in the database
+     */
     private int getNumberOfRowsInTable() {
         return this.connectionModel.getNumberOfRows("comments");
     }

@@ -1,13 +1,17 @@
 import gui.screens.*;
 import utility.UserInterface;
 
-
 public class Main {
     public static void main(String[] args) {
-        //MultiInputOptionPane pane = new MultiInputOptionPane();
+        //create the GUI
         UserInterface userInterface = new UserInterface();
+        //set the pages in the GUI
         createUI(userInterface);
     }
+    /**
+     * insert into the UserInterface the pages/screens
+     * @param userInterface represents the GUI we are going to display
+     * */
     public static void createUI(UserInterface userInterface){
         userInterface.setScreenInUI(new HomeScreen());
         userInterface.setScreenInUI(new BossScreen());

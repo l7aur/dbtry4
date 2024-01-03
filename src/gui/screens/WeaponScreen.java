@@ -9,6 +9,7 @@ import javax.swing.*;
 
 
 public class WeaponScreen extends Screen {
+    //Constructor
     public WeaponScreen(){
         super(Screens.WEAPON_SCREEN);
         JScrollPane scrollPane = new JScrollPane(this.setTable());
@@ -17,7 +18,7 @@ public class WeaponScreen extends Screen {
         this.content.add(scrollPane);
         this.setId(Screens.WEAPON_SCREEN);
     }
-
+    //Fetch data from database and display it into a table
     private JTable setTable() {
         String[] columnNames = { "id", "requirement_id", "image" };
         Tuple data = this.connectionModel.getDataFromDB("weapon", 81/*idk de ce +4*/, 3);

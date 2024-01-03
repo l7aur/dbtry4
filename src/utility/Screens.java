@@ -1,5 +1,8 @@
 package utility;
 
+/**
+ * Enumeration of all permitted screen types
+ */
 public enum Screens {
     HOME_SCREEN,
     ARMOR_SCREEN,

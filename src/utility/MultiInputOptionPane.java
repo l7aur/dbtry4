@@ -9,31 +9,45 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Creates a pop-up window with 2 entries specifically designed for the insertion of comments - TODO add atuhor field maybe
+ */
 public class MultiInputOptionPane extends JFrame{
     private Comment comment;
     private JTextField currentTextField;
     private JTextArea currentTextArea;
     private Container container;
     private SpringLayout layout;
-    private final Map<String, Integer > paddingMap;
+    private final Map<String, Integer > paddingMap; //map of padding constants with respect to the borders of the pop-up window
     private final Integer spacingConstant = 20;
     public MultiInputOptionPane() {
         super();
+        //initialization
+        this.comment = new Comment();
+        this.container = this.getContentPane();
+        this.layout = new SpringLayout(); //specific layout
+        this.container.setLayout(layout);
+
+        //fill the map
         this.paddingMap = new HashMap<>(4);
         this.paddingMap.put("north", 15);
         this.paddingMap.put("south", -15);
         this.paddingMap.put("east", -15);
         this.paddingMap.put("west", 15);
-        this.comment = new Comment();
-        this.container = this.getContentPane();
-        this.layout = new SpringLayout();
-        this.container.setLayout(layout);
+
         //difference in name length means different alignment LMAO, but these 2 are just perfect HAHAHAXDD
+        //add 2 text areas to be filled by the user
         this.currentTextField = this.addTextField("ID of item: ");
         this.currentTextArea = this.addTextArea ("Comment: ");
+        //add the done button
         this.addButton();
+        //make it visible
         this.setPaneUI();
     }
+
+    /**
+     * creates a button that will signal the comment form is filled and ready to be registered into the database
+     */
     public void addButton() {
         JButton button = new JButton("OK");
         this.container.add(button);
@@ -59,6 +73,13 @@ public class MultiInputOptionPane extends JFrame{
     public void closeFrame() {
         this.dispose();
     }
+
+    /**
+     * Check for data integrity:
+     * - both fields contain text
+     * - the item id exists in the database --TODO
+     * @return a flag that triggers the database insertion
+     */
     public boolean checkData() {
         boolean test = true;
         if (this.getComment().getCommentText().isEmpty()) {
@@ -72,6 +93,11 @@ public class MultiInputOptionPane extends JFrame{
         return test;
     }
 
+    /**
+     * Creates, places and aligns a text field in the pop-up window
+     * @param name name of the field that is displayed
+     * @return a text field
+     */
     public JTextField addTextField(String name) {
         JTextField textField = new JTextField(20);
         JLabel textLabel = new JLabel(name);
@@ -89,6 +115,12 @@ public class MultiInputOptionPane extends JFrame{
         }
         return textField;
     }
+
+    /**
+     * Creates, places and aligns a text area in the pop-up window
+     * @param name name of the text area that is displayed
+     * @return a text area
+     */
     public JTextArea addTextArea(String name) {
         JTextArea textArea = new JTextArea(10, 20);
         JLabel textLabel = new JLabel(name);
@@ -107,19 +139,20 @@ public class MultiInputOptionPane extends JFrame{
         }
         return textArea;
     }
-
-    public Comment getComment() {
-        return this.comment;
-    }
-
-    public void setComment(Comment comment) {
-        this.comment = comment;
-    }
-
+    /**
+     * Sets the side of the pop-up window, associates disposal on close and makes it visible
+     */
     public void setPaneUI() {
         this.setPreferredSize(new Dimension(400, 250));
         this.pack();
         this.setVisible(true);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+    /* Getters, Setters and Utility */
+    public Comment getComment() {
+        return this.comment;
+    }
+    public void setComment(Comment comment) {
+        this.comment = comment;
     }
 }

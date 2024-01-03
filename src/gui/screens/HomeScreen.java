@@ -5,6 +5,7 @@ import utility.Screens;
 
 
 public class HomeScreen extends Screen {
+    //Constructor
     public HomeScreen(){
         super(Screens.HOME_SCREEN);
         this.setId(Screens.HOME_SCREEN);

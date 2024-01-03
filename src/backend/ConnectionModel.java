@@ -5,6 +5,9 @@ import utility.Tuple;
 
 import java.sql.*;
 
+/**
+ * Connection to the postgresql database, relying on the postgres jdbc driver
+ */
 public class ConnectionModel {
     private final String url = "jdbc:postgresql://localhost/elden_ring";
     private final String user = "my_user";
@@ -21,8 +24,16 @@ public class ConnectionModel {
 
         return conn;
     }
+    /* Utilities */
 
-    public Tuple getDataFromDB(String tableName,int numberOfRows, int numberOfColumns) {
+    /**
+     * Performs a SELECT * from TABLE_NAME
+     * @param tableName the name of the table in the database
+     * @param numberOfRows can be removed
+     * @param numberOfColumns the number of columns in the table
+     * @return a Tuple whose matrix represents all the entries in the table
+     */
+    public Tuple getDataFromDB(String tableName, int numberOfRows, int numberOfColumns) {
         if(numberOfRows == 0)
             return null;
         String query = "SELECT * FROM " + tableName +";";
@@ -44,7 +55,13 @@ public class ConnectionModel {
         }
         return data;
     }
-    public int getNumberOfRows(String tableName) {
+
+    /**
+     * Counts the number of rows in a table
+     * @param tableName the name of the table in the database
+     * @return the number of rows in the table
+     */
+    public int getNumberOfRows(String tableName) { //TODO handle exception tableName does not exist
         String query = "SELECT COUNT(*) FROM " + tableName;
         try (Connection conn = connect();
              Statement stmt = conn.createStatement();
@@ -57,11 +74,16 @@ public class ConnectionModel {
         }
         return 0;
     }
+
+    /**
+     * Inserts a comment inside the database
+     * @param comment is the comment to be inserted in the database if no flag is set
+     */
     public void handleInsert(Comment comment) {
         String query = "INSERT INTO comments (item_id, comment) VALUES ('"
                          + comment.getId() + "','" + comment.getCommentText() + "')";
-        //TBD if item key does not exist
-        //TBD db fks to all items
+        //TODO if item key does not exist
+        //TODO db fks to all items
         try (Connection conn = connect(); //TBI maybe useless because i create connection before in screen
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query))

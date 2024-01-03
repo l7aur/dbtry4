@@ -7,20 +7,22 @@ import javax.swing.*;
 
 public class MyButton extends JButton {
     private Screens id;
-
+    //Constructors
     public MyButton(Screens name, Images imageIcon) {
+        //images that act as buttons
         super(imageIcon.getImageIcon());
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         this.setId(name);
         this.makeButtonImage();
     }
     public MyButton(Screens name){
-        super("COMMENT SCREEN BUTTON");
+        super("COMMENT SCREEN BUTTON");//TODO maybe change it to a picture
         this.setId(name);
     }
     public MyButton(){
         super("INSERT COMMENT BUTTON");
     }
+    /* Getters, Setters and Utility */
     public void makeButtonImage() {
         this.setOpaque(false);
         this.setContentAreaFilled(false);

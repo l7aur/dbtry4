@@ -3,6 +3,9 @@ package utility;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * enumeration of all permitted images
+ */
 public enum Images {
     ARMOR_ICON("./src/utility/images/armor.png"),
     HOME_ICON("./src/utility/images/home.png"),
@@ -12,6 +15,11 @@ public enum Images {
     CHARACTER_ICON("./src/utility/images/character.png"),
     BOSS_ICON("./src/utility/images/boss.png");
     private ImageIcon imageIcon;
+
+    /**
+     * Constructor, scales images to a desired dimension
+     * @param path path to the image
+     */
     Images(String path) {
         if(path != null) {
             this.imageIcon = new ImageIcon(path);
@@ -20,7 +28,7 @@ public enum Images {
             this.imageIcon = new ImageIcon(resizedImage);
         }
     }
-
+    /* Getters, Setters and Utility */
     public ImageIcon getImageIcon() {
         return imageIcon;
     }
