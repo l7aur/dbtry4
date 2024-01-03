@@ -1,9 +1,7 @@
 package gui.screens;
 
 import gui.Screen;
-import utility.MyTable;
 import utility.Screens;
-import utility.Tuple;
 
 import javax.swing.*;
 
