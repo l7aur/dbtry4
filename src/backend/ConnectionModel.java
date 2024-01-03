@@ -60,6 +60,8 @@ public class ConnectionModel {
     public void handleInsert(Comment comment) {
         String query = "INSERT INTO comments (item_id, comment) VALUES ('"
                          + comment.getId() + "','" + comment.getCommentText() + "')";
+        //TBD if item key does not exist
+        //TBD db fks to all items
         try (Connection conn = connect(); //TBI maybe useless because i create connection before in screen
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query))

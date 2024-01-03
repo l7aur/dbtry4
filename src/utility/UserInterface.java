@@ -17,8 +17,6 @@ public class UserInterface extends JFrame implements ActionListener {
         super();
         this.container = this.getContentPane();
         this.cardLayout = new CardLayout();
-        //this.mainPanel = new JPanel();
-        //this.mainPanel.setLayout(new BoxLayout(this.mainPanel, BoxLayout.Y_AXIS));
         this.container.setLayout(this.cardLayout);
     }
     public void publishUI() {
