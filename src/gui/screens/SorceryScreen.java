@@ -20,7 +20,7 @@ public class SorceryScreen extends Screen {
 
     private JTable setTable() {
         String[] columnNames = { "id", "description", "requirement_id", "magic_id", "image" };
-        Tuple data = this.connectionModel.getDataFromDB("sorcery", 32, 5);
+        Tuple data = this.connectionModel.getDataFromDB("sorcery", 12, 5);
         MyTable table = new MyTable(data.getData(), columnNames);
         table.setTableConstraints(data.getWidth());
         return table;

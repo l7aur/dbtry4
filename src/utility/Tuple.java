@@ -1,5 +1,6 @@
 package utility;
 
+
 public class Tuple {
     private String[][] data;
     private int width;
@@ -23,8 +24,10 @@ public class Tuple {
                     if (value == j) {
                         test = false;
                         for(int goodValue : columnIds)
-                            if(this.getDataValue(i, goodValue) != null)
+                            if(this.getDataValue(i, goodValue) != null) {
                                 newData.setDataValue(this.getDataValue(i, goodValue), i, j);
+                                break;
+                            }
                     }
                 if(test)
                     newData.setDataValue(this.getDataValue(i,j), i, j);

@@ -4,23 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="vadim tudor hai moarte sa stam la o cafea">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/ConnectionModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dbtry4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility/MyTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility/Tuple.java" afterDir="false" />
+    <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="maca maca e e">
+      <change afterPath="$PROJECT_DIR$/src/gui/buttons/CommentButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/buttons/InsertCommentButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/screens/CommentScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utility/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utility/MultiInputOptionPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbtry4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dbtry4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/ConnectionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/ConnectionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/MyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MyButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/buttons/ArmorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/ArmorButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/ArmorScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/ArmorScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/BossScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/BossScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/CharacterScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/CharacterScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/HomeScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/IncantationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/IncantationScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/SorceryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/SorceryScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/WeaponScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/WeaponScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Images.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/Screens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Screens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Tuple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +39,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "l7aur"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;l7aur&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -126,7 +127,9 @@
       <updated>1704173821843</updated>
       <workItem from="1704173822898" duration="5101000" />
       <workItem from="1704178950287" duration="3567000" />
-      <workItem from="1704185171111" duration="18497000" />
+      <workItem from="1704185171111" duration="18812000" />
+      <workItem from="1704224107875" duration="1662000" />
+      <workItem from="1704272267726" duration="17031000" />
     </task>
     <task id="LOCAL-00001" summary="aparatcik">
       <option name="closed" value="true" />
@@ -144,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704194956792</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="vadim tudor hai moarte sa stam la o cafea">
+      <option name="closed" value="true" />
+      <created>1704206569183</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704206569183</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +165,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="aparatcik" />
     <MESSAGE value="vadim tudor hai moarte sa stam la o cafea" />
-    <option name="LAST_COMMIT_MESSAGE" value="vadim tudor hai moarte sa stam la o cafea" />
+    <MESSAGE value="maca maca e e" />
+    <option name="LAST_COMMIT_MESSAGE" value="maca maca e e" />
   </component>
 </project>

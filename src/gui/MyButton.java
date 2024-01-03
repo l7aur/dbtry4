@@ -11,10 +11,19 @@ public class MyButton extends JButton {
     public MyButton(Screens name, Images imageIcon) {
         super(imageIcon.getImageIcon());
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-//        this.setBorderPainted(false);
+        this.setId(name);
+        this.makeButtonImage();
+    }
+    public MyButton(Screens name){
+        super("COMMENT SCREEN BUTTON");
+        this.setId(name);
+    }
+    public MyButton(){
+        super("INSERT COMMENT BUTTON");
+    }
+    public void makeButtonImage() {
         this.setOpaque(false);
         this.setContentAreaFilled(false);
-        this.setId(name);
     }
     public Screens getId(){
         return this.id;

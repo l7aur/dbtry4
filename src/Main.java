@@ -1,8 +1,10 @@
 import gui.screens.*;
 import utility.UserInterface;
 
+
 public class Main {
     public static void main(String[] args) {
+        //MultiInputOptionPane pane = new MultiInputOptionPane();
         UserInterface userInterface = new UserInterface();
         createUI(userInterface);
     }
@@ -14,6 +16,7 @@ public class Main {
         userInterface.setScreenInUI(new IncantationScreen());
         userInterface.setScreenInUI(new SorceryScreen());
         userInterface.setScreenInUI(new CharacterScreen());
+        userInterface.setScreenInUI(new CommentScreen());
         userInterface.publishUI();
     }
 }

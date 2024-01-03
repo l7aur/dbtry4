@@ -14,10 +14,11 @@ public class UserInterface extends JFrame implements ActionListener {
     private JPanel mainPanel;
     private Screens currentCard = Screens.HOME_SCREEN;
     public UserInterface(){
+        super();
         this.container = this.getContentPane();
         this.cardLayout = new CardLayout();
-        this.mainPanel = new JPanel();
-        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+        //this.mainPanel = new JPanel();
+        //this.mainPanel.setLayout(new BoxLayout(this.mainPanel, BoxLayout.Y_AXIS));
         this.container.setLayout(this.cardLayout);
     }
     public void publishUI() {
@@ -36,9 +37,12 @@ public class UserInterface extends JFrame implements ActionListener {
                 screen.addSorceryButton(this);
                 screen.addIncantationButton(this);
                 screen.addCharacterButton(this);
+                screen.addCommentButton(this);
             }
-            else
+            else {
                 screen.addHomeButton(this);
+                screen.addInsertButton();
+            }
             this.container.add(screen.getId().toString(), screen);
             System.out.println(screen.getId().toString());
         }
@@ -61,6 +65,7 @@ public class UserInterface extends JFrame implements ActionListener {
                 case Screens.SORCERY_SCREEN -> goToScreen = Screens.SORCERY_SCREEN;
                 case Screens.INCANTATION_SCREEN -> goToScreen = Screens.INCANTATION_SCREEN;
                 case Screens.CHARACTER_SCREEN -> goToScreen = Screens.CHARACTER_SCREEN;
+                case Screens.COMMENT_SCREEN -> goToScreen = Screens.COMMENT_SCREEN;
 //                default -> {
 //                    System.out.println("Cannot reach that from home page!");
 //                }

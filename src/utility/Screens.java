@@ -8,5 +8,6 @@ public enum Screens {
     CHARACTER_SCREEN,
     SORCERY_SCREEN,
     INCANTATION_SCREEN,
+    COMMENT_SCREEN,
     SCREEN
 }

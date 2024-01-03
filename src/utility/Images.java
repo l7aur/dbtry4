@@ -13,10 +13,12 @@ public enum Images {
     BOSS_ICON("./src/utility/images/boss.png");
     private ImageIcon imageIcon;
     Images(String path) {
-        this.imageIcon = new ImageIcon(path);
-        Image image = imageIcon.getImage();
-        Image resizedImage = image.getScaledInstance(150,150, Image.SCALE_SMOOTH);
-        this.imageIcon = new ImageIcon(resizedImage);
+        if(path != null) {
+            this.imageIcon = new ImageIcon(path);
+            Image image = imageIcon.getImage();
+            Image resizedImage = image.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+            this.imageIcon = new ImageIcon(resizedImage);
+        }
     }
 
     public ImageIcon getImageIcon() {
