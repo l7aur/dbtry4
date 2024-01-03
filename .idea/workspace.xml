@@ -6,34 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="maca maca e e">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/ConnectionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/ConnectionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MyButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/ArmorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/ArmorButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/BossButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/BossButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/CharacterButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/CharacterButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/CommentButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/CommentButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/HomeButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/HomeButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/IncantationButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/IncantationButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/InsertCommentButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/InsertCommentButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/SorceryButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/SorceryButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/buttons/WeaponButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/WeaponButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/ArmorScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/ArmorScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/BossScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/BossScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/CharacterScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/CharacterScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/CommentScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/CommentScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/HomeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/IncantationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/IncantationScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/SorceryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/SorceryScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/WeaponScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/WeaponScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Images.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/MultiInputOptionPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/MultiInputOptionPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/MyTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/MyTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/Screens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Screens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Tuple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,32 +60,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/L7aur/IdeaProjects/dbtry4/postgresql-42.7.1.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/L7aur/IdeaProjects/dbtry4/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/L7aur/IdeaProjects/dbtry4/postgresql-42.7.1.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/L7aur/IdeaProjects/dbtry4/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\L7aur\IdeaProjects\dbtry4\src\utility\images" />
@@ -145,7 +126,8 @@
       <workItem from="1704185171111" duration="18812000" />
       <workItem from="1704224107875" duration="1662000" />
       <workItem from="1704272267726" duration="17812000" />
-      <workItem from="1704295098884" duration="5315000" />
+      <workItem from="1704295098884" duration="5355000" />
+      <workItem from="1704308573517" duration="1858000" />
     </task>
     <task id="LOCAL-00001" summary="aparatcik">
       <option name="closed" value="true" />
@@ -187,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704290119401</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="maca maca e e">
+      <option name="closed" value="true" />
+      <created>1704300453409</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704300453409</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

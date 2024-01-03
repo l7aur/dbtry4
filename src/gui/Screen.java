@@ -3,7 +3,9 @@ package gui;
 import backend.ConnectionModel;
 import gui.buttons.*;
 import utility.MultiInputOptionPane;
+import utility.MyTable;
 import utility.Screens;
+import utility.Tuple;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,8 +42,34 @@ public class Screen extends JPanel {
         this.setPreferredSize(new Dimension(1080, 720));
         JLabel text = new JLabel(title.toString().toUpperCase().replace('_', ' '));
         this.header.add(text);
-
     }
+    /**
+     * Fetch data from database and display it into a table
+     * @param name name of the table
+     * @param columnNames names of the columns of the table taken from the database
+     * @param numberOfColumns TODO sql function so that i can remove this parameter
+     * @param filteringRequired flag if true filteredColumns must be non-null
+     * @param filteredColumns index of the columns to be filtered, 1-indexed, must be absolutely exclusive fields
+     * @return table to be displayed on the screen
+     */
+    protected JTable setTable(String name, String[] columnNames, int numberOfColumns, boolean filteringRequired, int[] filteredColumns) {
+        try {
+            Tuple data = this.connectionModel.getDataFromDB(name, this.connectionModel.getNumberOfRows(name), numberOfColumns);
+            if (filteringRequired) {
+                if(filteredColumns == null)
+                    throw new NullPointerException();
+                else
+                    data = data.filterData(filteredColumns); //absolutely exclusive fields
+            }
+            MyTable table = new MyTable(data.getData(), columnNames);
+            table.setTableConstraints(data.getWidth());
+            return table;
+        }
+        catch (NullPointerException e){
+            return new MyTable((new Tuple(0,0)).getData(), columnNames);
+        }
+    }
+
     /* Getters, Setters and Utility */
     /**
      * Adds an X-type button to the current screen
