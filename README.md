@@ -1,6 +1,6 @@
 # Elden Ring related database + GUI
 
-#### (unbelievably worse Fextralife in every single aspect) 
+#### ([Inspiration](https://eldenring.wiki.fextralife.com/Elden+Ring+Wiki) unbelievably worse Fextralife in every single aspect) 
 
 
 This is the mandatory project required for the database course (DB) in the second year at Technical University of 
