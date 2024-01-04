@@ -64,7 +64,7 @@ public class ConnectionModel {
      * @param tableName the name of the table in the database
      * @return the number of rows in the table
      */
-    public int getNumberOfRows(String tableName) { //TODO handle exception tableName does not exist
+    public int getNumberOfRows(String tableName) {
         String query = "SELECT COUNT(*) FROM " + tableName;
         try
         {
@@ -109,7 +109,7 @@ public class ConnectionModel {
                          + comment.getId() + "','" + comment.getCommentText() + "')";
         try
         {
-            Connection conn = connect(); //TODO don t like
+            Connection conn = connect();
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(query);
         }

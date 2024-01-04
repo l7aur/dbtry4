@@ -1,7 +1,7 @@
 package utility;
 
 /**
- * Comment class composed of the id of the item to be commented on, the comment itself and TODO the author
+ * Comment class composed of the id of the item to be commented on, the comment itself
  */
 public class Comment {
     private String id;

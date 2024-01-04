@@ -4,20 +4,18 @@ import backend.ConnectionModel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Creates a pop-up window with 2 entries specifically designed for the insertion of comments - TODO add atuhor field maybe
+ * Creates a pop-up window with 2 entries specifically designed for the insertion of comments
  */
 public class MultiInputOptionPane extends JFrame{
-    private Comment comment;
-    private JTextField currentTextField;
-    private JTextArea currentTextArea;
-    private Container container;
-    private SpringLayout layout;
+    private final Comment comment;
+    private final JTextField currentTextField;
+    private final JTextArea currentTextArea;
+    private final Container container;
+    private final SpringLayout layout;
     private final Map<String, Integer > paddingMap; //map of padding constants with respect to the borders of the pop-up window
     private final Integer spacingConstant = 20;
     public MultiInputOptionPane() {
@@ -53,21 +51,17 @@ public class MultiInputOptionPane extends JFrame{
         this.container.add(button);
         this.layout.putConstraint(SpringLayout.VERTICAL_CENTER, button, 0, SpringLayout.VERTICAL_CENTER, this.container);
         this.layout.putConstraint(SpringLayout.EAST, button, this.paddingMap.get("east"), SpringLayout.EAST, this.container);
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //nu de aici am exceptie class not found TBI
-                comment.setCommentText(currentTextArea.getText());
-                comment.setId(currentTextField.getText());
-                if(checkData()) {
-                    setVisible(false);
-                    ConnectionModel connectionModel = new ConnectionModel();
-                    connectionModel.connect();
-                    connectionModel.handleInsert(comment);
-                }
-                closeFrame();
-
+        button.addActionListener(e -> {
+            //nu de aici am exceptie class not found TBI
+            comment.setCommentText(currentTextArea.getText());
+            comment.setId(currentTextField.getText());
+            if(checkData()) {
+                setVisible(false);
+                ConnectionModel connectionModel = new ConnectionModel();
+                connectionModel.connect();
+                connectionModel.handleInsert(comment);
             }
+            closeFrame();
         });
     }
     public void closeFrame() {
@@ -77,7 +71,7 @@ public class MultiInputOptionPane extends JFrame{
     /**
      * Check for data integrity:
      * - both fields contain text
-     * - the item id exists in the database --TODO
+     * - the item id exists in the database
      * @return a flag that triggers the database insertion
      */
     public boolean checkData() {
@@ -151,8 +145,5 @@ public class MultiInputOptionPane extends JFrame{
     /* Getters, Setters and Utility */
     public Comment getComment() {
         return this.comment;
-    }
-    public void setComment(Comment comment) {
-        this.comment = comment;
     }
 }

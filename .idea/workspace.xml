@@ -7,15 +7,9 @@
     <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="n">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/ConnectionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/ConnectionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/ArmorScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/ArmorScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/BossScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/BossScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/CharacterScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/CharacterScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/IncantationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/IncantationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/SorceryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/SorceryScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/screens/WeaponScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/WeaponScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utility/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/MultiInputOptionPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/MultiInputOptionPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/MyTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/MyTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +126,7 @@
       <workItem from="1704356134975" duration="8621000" />
       <workItem from="1704369113087" duration="362000" />
       <workItem from="1704369507168" duration="7758000" />
-      <workItem from="1704384306141" duration="4425000" />
+      <workItem from="1704384306141" duration="4906000" />
     </task>
     <task id="LOCAL-00001" summary="aparatcik">
       <option name="closed" value="true" />
@@ -222,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704379664248</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="n">
+      <option name="closed" value="true" />
+      <created>1704388866235</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704388866235</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
