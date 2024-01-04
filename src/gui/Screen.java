@@ -6,7 +6,6 @@ import utility.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Screen extends JPanel {
@@ -26,6 +25,11 @@ public class Screen extends JPanel {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.add(header);
         this.add(content);
+                content.setLayout(new GridBagLayout());
+                footer.setLayout(new BoxLayout(footer, BoxLayout.X_AXIS));
+                header.setPreferredSize(new Dimension(1080, 20));
+                footer.setPreferredSize(new Dimension(1080, 100));
+                content.setPreferredSize(new Dimension(1080, 600));
         this.add(footer);
         this.setPreferredSize(new Dimension(1080, 720));
         JLabel text = new JLabel(title.toString().toUpperCase().replace('_', ' '));
@@ -64,10 +68,17 @@ public class Screen extends JPanel {
      * @return JScrollPane that contains the data
      */
     protected JScrollPane getTable(String tableName) {
-        MyTable myTable = this.setTable( tableName, this.columnNames, false, null);
-        JScrollPane scrollPane = new JScrollPane(myTable);
-        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        MyTable myTable;
+        if (tableName.equals("boss")) {
+            myTable = this.setTable(tableName, this.columnNames, true, new int[]{2, 5, 6, 7, 8});
+        }
+        else if(tableName.equals("character")) {
+            myTable = this.setTable(tableName, this.columnNames, true, new int[] {2, 4, 5, 6, 7});
+        }
+        else
+            myTable = this.setTable( tableName, this.columnNames, false, null);
+        JScrollPane scrollPane = new JScrollPane(myTable,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setPreferredSize(new Dimension(800,400));
         return scrollPane;
     }
     /**
@@ -75,10 +86,11 @@ public class Screen extends JPanel {
      * @param scrollPane JScrollPane to be displayed
      */
     protected void paintTable(JScrollPane scrollPane) {
-        this.content.add(scrollPane);
+        GridBagConstraints c = new GridBagConstraints();
+        c.anchor = GridBagConstraints.FIRST_LINE_START;
+        this.content.add(scrollPane, c);
         this.content.repaint();
     }
-
     /**
      * Refreshes the screen table component
      * @param name name of the table component in the database
@@ -88,7 +100,6 @@ public class Screen extends JPanel {
         this.removeOldTable();
         this.paintTable(newPane);
     }
-
     /**
      *  Drops the current table from the JPanel
      */
@@ -108,8 +119,7 @@ public class Screen extends JPanel {
     public void addHomeButton(ActionListener actionListener) {
         HomeButton currentScreenHomeButton = new HomeButton();
         currentScreenHomeButton.addActionListener(actionListener);
-        this.content.setAlignmentX(Container.LEFT_ALIGNMENT);
-        this.content.add(currentScreenHomeButton);
+        this.footer.add(currentScreenHomeButton);
     }
     public void addArmorButton(ActionListener actionListener) {
         ArmorButton currentScreenArmorButton = new ArmorButton();
@@ -148,9 +158,8 @@ public class Screen extends JPanel {
     }
     public void addInsertButton() {
         InsertCommentButton currentInsertCommentButton = new InsertCommentButton();
-        //String screen = this.id.toString();
-        this.content.setAlignmentX(Container.LEFT_ALIGNMENT);
-        this.content.add(currentInsertCommentButton);
+        currentInsertCommentButton.setPreferredSize(new Dimension(200,100));
+        this.footer.add(currentInsertCommentButton, BorderLayout.PAGE_END);
         //on button press create a pop-up window that fetches a Comment
         currentInsertCommentButton.addActionListener(e -> (new MultiInputOptionPane()).setLocationRelativeTo(null));
     }

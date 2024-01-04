@@ -10,13 +10,13 @@ import java.sql.*;
  * Connection to the postgresql database, relying on the postgres jdbc driver
  */
 public class ConnectionModel {
-    private final String url = "jdbc:postgresql://localhost/elden_ring";
-    private final String user = "my_user";
-    private final String password = "root";
 
     public Connection connect() {
         Connection conn = null;
         try {
+            String url = "jdbc:postgresql://localhost/elden_ring";
+            String user = "my_user";
+            String password = "root";
             conn = DriverManager.getConnection(url, user, password);
             System.out.println("Connected to the PostgreSQL server successfully.");
         }
@@ -47,7 +47,7 @@ public class ConnectionModel {
             data.setWidth(numberOfColumns);
             while(rs.next()) {
                 for(int columnNumber = 1; columnNumber <= numberOfColumns; columnNumber++)
-                        data.setDataValue(rs.getString(columnNumber), data.getLength(), columnNumber - 1);
+                    data.setDataValue(rs.getString(columnNumber), data.getLength(), columnNumber - 1);
                 data.incrementLength(1);
                 if(data.getLength() == numberOfRows)
                     break;

@@ -14,8 +14,8 @@ import java.awt.event.ActionListener;
  * implements ActionListener to be able to move through pages/screens
  * */
 public class UserInterface extends JFrame implements ActionListener {
-    private CardLayout cardLayout; //use CardLayout so that all pages are displayed in the same frame
-    private Container container; //the sandbox of the frame
+    private final CardLayout cardLayout; //use CardLayout so that all pages are displayed in the same frame
+    private final Container container; //the sandbox of the frame
     /**
      * Constructor
      * */
@@ -67,9 +67,10 @@ public class UserInterface extends JFrame implements ActionListener {
         }
     }
     public void setCommentScreenInUI(CommentScreen screen) {
-        screen.addHomeButton(new MyActionListener(screen, this.cardLayout, this.container));
         //add the screen and its identifier into the deck of screens
         this.container.add(screen.getId().toString(), screen);
+        screen.addHomeButton(new MyActionListener(screen, this.cardLayout, this.container));
+
     }
 
     /**

@@ -11,7 +11,11 @@ public class Comment {
         return id;
     }
     public void setId(String id) {
-        this.id = id;
+        if(id.contains("'")) {
+            this.id = id.replace("'", "''");
+        }
+        else
+            this.id = id;
     }
     public String getCommentText() {
         return commentText;
