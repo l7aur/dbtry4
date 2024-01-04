@@ -1,7 +1,7 @@
 # Elden Ring related database + GUI
 
-#### ([Inspiration](https://eldenring.wiki.fextralife.com/Elden+Ring+Wiki) unbelievably worse Fextralife in every single aspect) 
-
+#### (unbelievably worse Fextralife in every single aspect) 
+#### [Inspiration](https://eldenring.wiki.fextralife.com/Elden+Ring+Wiki)
 
 This is the mandatory project required for the database course (DB) in the second year at Technical University of 
 Cluj-Napoca. Its purpose is to familiarize one with the SQL language, the most common sql servers, and an IDE 
