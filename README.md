@@ -50,7 +50,10 @@ The GUI is composed of 8 "screens" (pages, frames):
   - Comment Screen
   
   These screens display the data taken from the table that is part of the database. All these screens contain a **home
-button** that changes the screen back to the home screen and an **insert comment button** that opens a pop-up window: ![](img.png)
+button** that changes the screen back to the home screen and an **insert comment button** that opens a pop-up window:
+
+![](img.png)
+
 Here, the user can fill in this form that is saved in the **comments** table inside the database. No filtering of the comment text is
 done, but the table is equipped with a trigger that checks if the id of the item the comment targets exists inside those
 specific tables. Every screen but the home one is equipped with the **insert comment button** to make it easier to get the id
