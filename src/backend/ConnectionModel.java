@@ -4,7 +4,6 @@ import utility.Comment;
 import utility.Tuple;
 
 import javax.swing.*;
-import java.awt.*;
 import java.sql.*;
 
 /**
@@ -20,10 +19,10 @@ public class ConnectionModel {
         try {
             conn = DriverManager.getConnection(url, user, password);
             System.out.println("Connected to the PostgreSQL server successfully.");
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
         return conn;
     }
     /* Utilities */
@@ -31,19 +30,20 @@ public class ConnectionModel {
     /**
      * Performs a SELECT * from TABLE_NAME
      * @param tableName the name of the table in the database
-     * @param numberOfRows can be removed
-     * @param numberOfColumns the number of columns in the table
      * @return a Tuple whose matrix represents all the entries in the table
      */
-    public Tuple getDataFromDB(String tableName, int numberOfRows, int numberOfColumns) {
+    public Tuple getDataFromDB(String tableName) {
+        int numberOfRows = this.getNumberOfRows(tableName);
+        int numberOfColumns = this.getNumberOfColumns(tableName);
         if(numberOfRows == 0)
             return null;
         String query = "SELECT * FROM " + tableName +";";
-        Tuple data = new Tuple(numberOfRows, numberOfColumns); //efectiv unlucky bozo
-        try (Connection conn = connect();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(query))
+        Tuple data = new Tuple(numberOfRows, numberOfColumns);
+        try
         {
+            Connection conn = connect();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
             data.setWidth(numberOfColumns);
             while(rs.next()) {
                 for(int columnNumber = 1; columnNumber <= numberOfColumns; columnNumber++)
@@ -52,7 +52,8 @@ public class ConnectionModel {
                 if(data.getLength() == numberOfRows)
                     break;
             }
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
         return data;
@@ -65,26 +66,35 @@ public class ConnectionModel {
      */
     public int getNumberOfRows(String tableName) { //TODO handle exception tableName does not exist
         String query = "SELECT COUNT(*) FROM " + tableName;
-        try (Connection conn = connect();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(query))
+        try
         {
+            Connection conn = connect();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
             rs.next();
             return rs.getInt("count");
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
         return 0;
     }
-    public int getNumberOfColumns(String tableName) { //TODO handle exception tableName does not exist
+    /**
+     * Counts the number of columns in a table
+     * @param tableName the name of the table in the database
+     * @return the number of columns in the table
+     */
+    public int getNumberOfColumns(String tableName) {
         String query = "select count(column_name) from information_schema.columns where table_name = '" + tableName + "';";
-        try (Connection conn = connect();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(query))
+        try
         {
+            Connection conn = connect();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
             rs.next();
             return rs.getInt("count");
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
         return 0;
@@ -99,10 +109,11 @@ public class ConnectionModel {
                          + comment.getId() + "','" + comment.getCommentText() + "')";
         try
         {
-            Connection conn = connect(); //TODO don t like has to refresh at least when button is exit and back in
+            Connection conn = connect(); //TODO don t like
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(query);
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex) {
             System.out.println(ex.getMessage());
             JOptionPane.showMessageDialog(null, "INSERT FAILED! WRONG ID!");
         }

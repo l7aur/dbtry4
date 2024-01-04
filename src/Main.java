@@ -15,6 +15,7 @@ public class Main {
      * */
     public static void createUI(UserInterface userInterface){
         ConnectionModel connectionModel = new ConnectionModel();
+        CommentScreen commentScreen =  new CommentScreen(connectionModel);
         userInterface.setScreenInUI(new HomeScreen());
         userInterface.setScreenInUI(new BossScreen(connectionModel));
         userInterface.setScreenInUI(new WeaponScreen(connectionModel));
@@ -22,7 +23,7 @@ public class Main {
         userInterface.setScreenInUI(new IncantationScreen(connectionModel));
         userInterface.setScreenInUI(new SorceryScreen(connectionModel));
         userInterface.setScreenInUI(new CharacterScreen(connectionModel));
-        userInterface.setScreenInUI(new CommentScreen(connectionModel));
+        userInterface.setCommentScreenInUI(commentScreen);
         userInterface.publishUI();
     }
 }

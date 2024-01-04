@@ -46,7 +46,7 @@ public class MultiInputOptionPane extends JFrame{
     }
 
     /**
-     * creates a button that will signal the comment form is filled and ready to be registered into the database
+     * Creates a button that will signal the comment form is filled and ready to be registered into the database
      */
     public void addButton() {
         JButton button = new JButton("OK");

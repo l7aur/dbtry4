@@ -2,6 +2,7 @@ package utility;
 
 import gui.MyButton;
 import gui.Screen;
+import gui.screens.CommentScreen;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,9 +16,8 @@ import java.awt.event.ActionListener;
 public class UserInterface extends JFrame implements ActionListener {
     private CardLayout cardLayout; //use CardLayout so that all pages are displayed in the same frame
     private Container container; //the sandbox of the frame
-    private Screens currentCard = Screens.HOME_SCREEN; //the page that is currently displayed
     /**
-     * constructor
+     * Constructor
      * */
     public UserInterface(){
         super();
@@ -60,12 +60,16 @@ public class UserInterface extends JFrame implements ActionListener {
             }
             //add the screen and its identifier into the deck of screens
             this.container.add(screen.getId().toString(), screen);
-//debug            System.out.println(screen.getId().toString());
         }
         catch (NullPointerException e) {
             //better handling may be required
             System.out.println("No screen!");
         }
+    }
+    public void setCommentScreenInUI(CommentScreen screen) {
+        screen.addHomeButton(new MyActionListener(screen, this.cardLayout, this.container));
+        //add the screen and its identifier into the deck of screens
+        this.container.add(screen.getId().toString(), screen);
     }
 
     /**
@@ -75,7 +79,7 @@ public class UserInterface extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Screens goToScreen = ((MyButton) e.getSource()).getId();
-//debug            System.out.println("Target is " + target.getId().toString());
+//        connectionModel.connect();
         cardLayout.show(container, goToScreen.toString());
     }
 }

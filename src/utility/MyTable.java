@@ -12,11 +12,18 @@ import java.awt.*;
  * the table cells are not editable,
  */
 public class MyTable extends JTable {
+    private String[][] data;
     public MyTable(String[][] data, String[] columnNames) {
         super(data, columnNames);
+        this.data =data;
         this.setAlignmentX(JTable.AUTO_RESIZE_ALL_COLUMNS);
         this.setAlignmentX(CENTER_ALIGNMENT);
     }
+
+    public String[][] getData() {
+        return data;
+    }
+
     @Override
     public boolean isCellEditable(int row, int column) {
         return false;

@@ -2,10 +2,7 @@ package gui;
 
 import backend.ConnectionModel;
 import gui.buttons.*;
-import utility.MultiInputOptionPane;
-import utility.MyTable;
-import utility.Screens;
-import utility.Tuple;
+import utility.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,21 +10,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Screen extends JPanel {
-
-//    private HomeButton currentScreenHomeButton;
-//    private ArmorButton currentScreenArmorButton;
-//    private BossButton currentScreenBossButton;
-//    private IncantationButton currentScreenIncantationButton;
-//    private SorceryButton currentScreenSorceryButton;
-//    private CharacterButton currentScreenCharacterButton;
-//    private WeaponButton currentScreenWeaponButton;
-//    private InsertCommentButton currentInsertCommentButton;
-//    private CommentButton currentScreenCommentButton;
-    protected ConnectionModel connectionModel; //TODO move this into buttons as variable
+    protected ConnectionModel connectionModel;
     private Screens id = Screens.SCREEN;
     protected JPanel header;
     protected JPanel footer; //good for even spacing
     protected JPanel content;
+    protected String[] columnNames;
+    //Constructor
     public Screen(Screens title, ConnectionModel connectionModel) {
         super();
         header = new JPanel();
@@ -50,10 +39,9 @@ public class Screen extends JPanel {
      * @param filteredColumns index of the columns to be filtered, 1-indexed, must be absolutely exclusive fields
      * @return table to be displayed on the screen
      */
-    protected JTable setTable(String name, String[] columnNames, boolean filteringRequired, int[] filteredColumns) {
+    protected MyTable setTable(String name, String[] columnNames, boolean filteringRequired, int[] filteredColumns) {
         try {
-            Tuple data = this.connectionModel.getDataFromDB(name, this.connectionModel.getNumberOfRows(name),
-                                                                  this.connectionModel.getNumberOfColumns(name));
+            Tuple data = connectionModel.getDataFromDB(name);
             if (filteringRequired) {
                 if(filteredColumns == null)
                     throw new NullPointerException();
@@ -70,6 +58,49 @@ public class Screen extends JPanel {
     }
 
     /* Getters, Setters and Utility */
+    /**
+     * Creates a JScrollPane that contains the table of entries taken from the databse
+     * @param tableName the name of the table in the database
+     * @return JScrollPane that contains the data
+     */
+    protected JScrollPane getTable(String tableName) {
+        MyTable myTable = this.setTable( tableName, this.columnNames, false, null);
+        JScrollPane scrollPane = new JScrollPane(myTable);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        return scrollPane;
+    }
+    /**
+     * Displays a JScrollPane inside a JPanel
+     * @param scrollPane JScrollPane to be displayed
+     */
+    protected void paintTable(JScrollPane scrollPane) {
+        this.content.add(scrollPane);
+        this.content.repaint();
+    }
+
+    /**
+     * Refreshes the screen table component
+     * @param name name of the table component in the database
+     */
+    public void refresh(String name) {
+        JScrollPane newPane = this.getTable(name);
+        this.removeOldTable();
+        this.paintTable(newPane);
+    }
+
+    /**
+     *  Drops the current table from the JPanel
+     */
+    protected void removeOldTable() {
+        Component[] components = this.content.getComponents();
+        for (Component component : components) {
+            if (component instanceof JScrollPane) {
+                this.content.remove(component);
+                break;
+            }
+        }
+    }
     /**
      * Adds an X-type button to the current screen
      * @param actionListener button press
@@ -120,13 +151,8 @@ public class Screen extends JPanel {
         //String screen = this.id.toString();
         this.content.setAlignmentX(Container.LEFT_ALIGNMENT);
         this.content.add(currentInsertCommentButton);
-        currentInsertCommentButton.addActionListener(new ActionListener() {
-            //on button press create a pop-up window that fetches a Comment
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new MultiInputOptionPane();
-            }
-        });
+        //on button press create a pop-up window that fetches a Comment
+        currentInsertCommentButton.addActionListener(e -> (new MultiInputOptionPane()).setLocationRelativeTo(null));
     }
     public void setId(Screens newName) {
         this.id = newName;
