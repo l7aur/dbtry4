@@ -3,6 +3,8 @@ package backend;
 import utility.Comment;
 import utility.Tuple;
 
+import javax.swing.*;
+import java.awt.*;
 import java.sql.*;
 
 /**
@@ -74,6 +76,19 @@ public class ConnectionModel {
         }
         return 0;
     }
+    public int getNumberOfColumns(String tableName) { //TODO handle exception tableName does not exist
+        String query = "select count(column_name) from information_schema.columns where table_name = '" + tableName + "';";
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(query))
+        {
+            rs.next();
+            return rs.getInt("count");
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return 0;
+    }
 
     /**
      * Inserts a comment inside the database
@@ -82,14 +97,14 @@ public class ConnectionModel {
     public void handleInsert(Comment comment) {
         String query = "INSERT INTO comments (item_id, comment) VALUES ('"
                          + comment.getId() + "','" + comment.getCommentText() + "')";
-        //TODO if item key does not exist
-        //TODO db fks to all items
-        try (Connection conn = connect(); //TBI maybe useless because i create connection before in screen
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(query))
+        try
         {
+            Connection conn = connect(); //TODO don t like has to refresh at least when button is exit and back in
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(query);
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
+            JOptionPane.showMessageDialog(null, "INSERT FAILED! WRONG ID!");
         }
         System.out.println("insert good");
     }

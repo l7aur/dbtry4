@@ -15,10 +15,6 @@ public class MyButton extends JButton {
         this.setId(name);
         this.makeButtonImage();
     }
-    public MyButton(Screens name){
-        super("COMMENT SCREEN BUTTON");//TODO maybe change it to a picture
-        this.setId(name);
-    }
     public MyButton(){
         super("INSERT COMMENT BUTTON");
     }

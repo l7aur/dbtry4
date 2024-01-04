@@ -4,16 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="maca maca e e">
+    <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="AAAAAAAAAAAAAAAAAAAAa">
+      <change afterPath="$PROJECT_DIR$/src/utility/images/comm.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/ConnectionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/ConnectionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/MyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MyButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/buttons/CommentButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/buttons/CommentButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/ArmorScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/ArmorScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/BossScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/BossScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/CharacterScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/CharacterScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/CommentScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/CommentScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/screens/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/HomeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/IncantationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/IncantationScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/SorceryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/SorceryScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/screens/WeaponScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/screens/WeaponScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Images.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +81,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/L7aur/IdeaProjects/dbtry4/postgresql-42.7.1.jar",
+    "last_opened_file_path": "C:/Users/L7aur/IdeaProjects/dbtry4/src/utility/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,7 +135,8 @@
       <workItem from="1704224107875" duration="1662000" />
       <workItem from="1704272267726" duration="17812000" />
       <workItem from="1704295098884" duration="5355000" />
-      <workItem from="1704308573517" duration="1858000" />
+      <workItem from="1704308573517" duration="2112000" />
+      <workItem from="1704356134975" duration="5309000" />
     </task>
     <task id="LOCAL-00001" summary="aparatcik">
       <option name="closed" value="true" />
@@ -177,7 +186,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704300453409</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cand vad mandra aplecata trei picioare am deodata">
+      <option name="closed" value="true" />
+      <created>1704310477471</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704310477471</updated>
+    </task>
+    <task id="LOCAL-00008" summary="AAAAAAAAAAAAAAAAAAAAa">
+      <option name="closed" value="true" />
+      <created>1704310557616</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704310557616</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +224,8 @@
     <MESSAGE value="aparatcik" />
     <MESSAGE value="vadim tudor hai moarte sa stam la o cafea" />
     <MESSAGE value="maca maca e e" />
-    <option name="LAST_COMMIT_MESSAGE" value="maca maca e e" />
+    <MESSAGE value="Cand vad mandra aplecata trei picioare am deodata" />
+    <MESSAGE value="AAAAAAAAAAAAAAAAAAAAa" />
+    <option name="LAST_COMMIT_MESSAGE" value="AAAAAAAAAAAAAAAAAAAAa" />
   </component>
 </project>

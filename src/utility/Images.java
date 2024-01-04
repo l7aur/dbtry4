@@ -13,7 +13,8 @@ public enum Images {
     INCANTATION_ICON("./src/utility/images/incantation.png"),
     SORCERY_ICON("./src/utility/images/sorcery.png"),
     CHARACTER_ICON("./src/utility/images/character.png"),
-    BOSS_ICON("./src/utility/images/boss.png");
+    BOSS_ICON("./src/utility/images/boss.png"),
+    COMM_ICON("./src/utility/images/comm.png");
     private ImageIcon imageIcon;
 
     /**

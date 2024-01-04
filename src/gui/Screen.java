@@ -28,13 +28,12 @@ public class Screen extends JPanel {
     protected JPanel header;
     protected JPanel footer; //good for even spacing
     protected JPanel content;
-    public Screen(Screens title) {
+    public Screen(Screens title, ConnectionModel connectionModel) {
         super();
         header = new JPanel();
         footer = new JPanel();
         content = new JPanel();
-        connectionModel = new ConnectionModel();
-        connectionModel.connect();
+        this.connectionModel = connectionModel;
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.add(header);
         this.add(content);
@@ -47,14 +46,14 @@ public class Screen extends JPanel {
      * Fetch data from database and display it into a table
      * @param name name of the table
      * @param columnNames names of the columns of the table taken from the database
-     * @param numberOfColumns TODO sql function so that i can remove this parameter
      * @param filteringRequired flag if true filteredColumns must be non-null
      * @param filteredColumns index of the columns to be filtered, 1-indexed, must be absolutely exclusive fields
      * @return table to be displayed on the screen
      */
-    protected JTable setTable(String name, String[] columnNames, int numberOfColumns, boolean filteringRequired, int[] filteredColumns) {
+    protected JTable setTable(String name, String[] columnNames, boolean filteringRequired, int[] filteredColumns) {
         try {
-            Tuple data = this.connectionModel.getDataFromDB(name, this.connectionModel.getNumberOfRows(name), numberOfColumns);
+            Tuple data = this.connectionModel.getDataFromDB(name, this.connectionModel.getNumberOfRows(name),
+                                                                  this.connectionModel.getNumberOfColumns(name));
             if (filteringRequired) {
                 if(filteredColumns == null)
                     throw new NullPointerException();

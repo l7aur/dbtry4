@@ -1,3 +1,4 @@
+import backend.ConnectionModel;
 import gui.screens.*;
 import utility.UserInterface;
 
@@ -13,14 +14,15 @@ public class Main {
      * @param userInterface represents the GUI we are going to display
      * */
     public static void createUI(UserInterface userInterface){
+        ConnectionModel connectionModel = new ConnectionModel();
         userInterface.setScreenInUI(new HomeScreen());
-        userInterface.setScreenInUI(new BossScreen());
-        userInterface.setScreenInUI(new WeaponScreen());
-        userInterface.setScreenInUI(new ArmorScreen());
-        userInterface.setScreenInUI(new IncantationScreen());
-        userInterface.setScreenInUI(new SorceryScreen());
-        userInterface.setScreenInUI(new CharacterScreen());
-        userInterface.setScreenInUI(new CommentScreen());
+        userInterface.setScreenInUI(new BossScreen(connectionModel));
+        userInterface.setScreenInUI(new WeaponScreen(connectionModel));
+        userInterface.setScreenInUI(new ArmorScreen(connectionModel));
+        userInterface.setScreenInUI(new IncantationScreen(connectionModel));
+        userInterface.setScreenInUI(new SorceryScreen(connectionModel));
+        userInterface.setScreenInUI(new CharacterScreen(connectionModel));
+        userInterface.setScreenInUI(new CommentScreen(connectionModel));
         userInterface.publishUI();
     }
 }
