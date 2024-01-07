@@ -55,10 +55,9 @@ The GUI is composed of 8 "screens" (pages, frames):
   These screens display the data taken from the table that is part of the database. All these screens contain a **home
 button** that changes the screen back to the home screen and an **insert comment button** that opens a pop-up window:
 
-![Insert pop-up window](img.png)
+  ![Insert pop-up window](img.png)
 
-Here, the user can fill in this form that is saved in the **comments** table inside the database. No filtering of the comment text is
-done, but the table is equipped with a trigger that checks if the id of the item the comment targets exists inside those
+  Here, the user can fill in this form that is saved in the **comments** table inside the database. No filtering of the comment text is done, but the table is equipped with a trigger that checks if the id of the item the comment targets exists inside those
 specific tables. When the *OK* button is pressed, the script sends an *INSERT INTO table_name VALUES* request to the postgres server.
 However, updates of the table in the comment screen are performed only when the screen is accessed. This may cause problems in the 
 future if one decides to develop the comment screen more, but for the sake of this project this does not impact the utility and aim of the
@@ -84,7 +83,9 @@ from the database requires, I maximized the number of queries the database gets.
 is processed. This means Java asks about three queries: how many rows, how many columns and fetch the data itself. The first two queries are needed because
 I decided to use a JTable whose constructor requires a matrix of predefined dimensions. Because the data type a JTable asks for is String I had to give up
 displaying any kind of pictures because trying to do that would require a lot of additional logic I did not find that relevant for what I tried to achieve. 
-
+I created some new utility classes such as: MyTable, Tuple, Screens and UserInterface that help me simplify relationships between various gui items. For example Tuple
+is a class that is, more or less, a wrap for a String-type matrix, storing its dimensions and the matrix data. It proved useful when fetching data from the 
+database (inside queries tuple-type objects are created, set and sent to display-inside-a-screen methods).
 ### Database
 
 
