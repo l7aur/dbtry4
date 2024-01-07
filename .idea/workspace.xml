@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="n">
-      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="lll" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +129,7 @@
       <workItem from="1704459554713" duration="19000" />
       <workItem from="1704459713304" duration="61000" />
       <workItem from="1704460079862" duration="213000" />
-      <workItem from="1704614241771" duration="4814000" />
+      <workItem from="1704614241771" duration="5425000" />
     </task>
     <task id="LOCAL-00001" summary="aparatcik">
       <option name="closed" value="true" />
@@ -242,7 +235,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704389246109</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="n">
+      <option name="closed" value="true" />
+      <created>1704619841953</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704619841953</updated>
+    </task>
+    <task id="LOCAL-00015" summary="lll">
+      <option name="closed" value="true" />
+      <created>1704620315691</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1704620315691</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +277,7 @@
     <MESSAGE value="AAAAAAAAAAAAAAAAAAAAa" />
     <MESSAGE value="m" />
     <MESSAGE value="n" />
-    <option name="LAST_COMMIT_MESSAGE" value="n" />
+    <MESSAGE value="lll" />
+    <option name="LAST_COMMIT_MESSAGE" value="lll" />
   </component>
 </project>

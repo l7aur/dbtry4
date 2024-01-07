@@ -83,7 +83,7 @@ from the database requires, I maximized the number of queries the database gets.
 is processed. This means Java asks about three queries: how many rows, how many columns and fetch the data itself. The first two queries are needed because
 I decided to use a JTable whose constructor requires a matrix of predefined dimensions. Because the data type a JTable asks for is String I had to give up
 displaying any kind of pictures because trying to do that would require a lot of additional logic I did not find that relevant for what I tried to achieve. 
-I created some new utility classes such as: MyTable, Tuple, Screens and UserInterface that help me simplify relationships between various gui items. For example Tuple
+I created some new utility classes such as: MyTable, Tuple, Screens and UserInterface etc. that help me simplify relationships between various gui items. For example Tuple
 is a class that is, more or less, a wrap for a String-type matrix, storing its dimensions and the matrix data. It proved useful when fetching data from the 
 database (inside queries tuple-type objects are created, set and sent to display-inside-a-screen methods).
 ### Database
