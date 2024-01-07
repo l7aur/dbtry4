@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7a5d702-318d-47f7-bd15-b2c1fb489009" name="Changes" comment="n">
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/ConnectionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/ConnectionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/MultiInputOptionPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/MultiInputOptionPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/MyTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/MyTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -104,7 +108,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-temurin-21.0.1-3183f394aec4-be7c972f" />
+        <option value="jdk-21.0.1-temurin-21.0.1-f644763e9732-a3c558b9" />
       </set>
     </attachedChunks>
   </component>
@@ -126,7 +130,13 @@
       <workItem from="1704356134975" duration="8621000" />
       <workItem from="1704369113087" duration="362000" />
       <workItem from="1704369507168" duration="7758000" />
-      <workItem from="1704384306141" duration="4906000" />
+      <workItem from="1704384306141" duration="4983000" />
+      <workItem from="1704389349182" duration="138000" />
+      <workItem from="1704458901897" duration="35000" />
+      <workItem from="1704459554713" duration="19000" />
+      <workItem from="1704459713304" duration="61000" />
+      <workItem from="1704460079862" duration="213000" />
+      <workItem from="1704614241771" duration="4814000" />
     </task>
     <task id="LOCAL-00001" summary="aparatcik">
       <option name="closed" value="true" />
@@ -224,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704388866235</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="n">
+      <option name="closed" value="true" />
+      <created>1704389246109</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704389246109</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
