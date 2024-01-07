@@ -118,7 +118,6 @@ whose main feature is a search bar or a filter-like form.
 for the incantation or sorcery database entries, [see this](https://eldenring.wiki.fextralife.com/Comet+Azur)). This would be a massive
 improvement in the look and feel of the application.
 - I love the way the site implemented the "build calculator", however this would require a complete redesign of all I did, mostly the database itself. 
+- creating a database that keeps track of users that comment for better management, creates a possibility for a badge-reward system
 
 ## License
-
-## Additional Sections (Optional)
