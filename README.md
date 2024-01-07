@@ -71,6 +71,7 @@ the id field). All screens perform a *SELECT * FROM table_name*.
 ### Java
 
 ![img_3.png](img_3.png)
+
 The frontend of the project is made using Java Swing. Its base building block is the CardLayout: each screen is a "card" inside
 a "deck of cards" and the frontend scripts manage the visibility of them. Only one card is visible at any time. The main issue with this
 approach is that all cards must be created before being inserted into the deck meaning that some complex functionalities that  may 
@@ -88,7 +89,8 @@ is a class that is, more or less, a wrap for a String-type matrix, storing its d
 database (inside queries tuple-type objects are created, set and sent to display-inside-a-screen methods).
 ### Database
 
-
+![img_5.png](img_5.png)
+![armor.png](image0.png)
   
 ## Installation
 
@@ -98,7 +100,9 @@ in an IDE such as IntellijIdea.
 ## Usage
 
 When the app is run this widow opens:
-TODO add image ![img_4.png](img_4.png)
+
+![img_4.png](img_4.png)
+
 Any button can be pressed.
 
 ## Further developments
