@@ -94,7 +94,7 @@ database (inside queries tuple-type objects are created, set and sent to display
   
 ## Installation
 
-Download the project, the dependencies, create the database, fill the database (TODO smth about this) and run the application 
+Download the project, the dependencies, create the database, restore the database from the dumpfile and run the application 
 in an IDE such as IntellijIdea.
 
 ## Usage

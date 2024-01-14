@@ -21,6 +21,7 @@ public class UserInterface extends JFrame implements ActionListener {
      * */
     public UserInterface(){
         super();
+        this.setTitle("Bad fextralife");
         this.container = this.getContentPane();
         this.cardLayout = new CardLayout();
         this.container.setLayout(this.cardLayout);
